@@ -16,7 +16,9 @@ content="IE=edge">
 href="https://fontsgstatic.com">
         <link href="https://fonts.googleapis.com/css?
 family=Raleway:300,400,600" rel="stylesheet"type="text/css">
-
+        <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
+        
+        <link href="{{ secure_asset('css/profile.css') }}" rel="stylesheet">
         
     </head>
     <body>
