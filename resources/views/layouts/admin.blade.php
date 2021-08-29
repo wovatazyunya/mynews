@@ -39,7 +39,7 @@ family=Raleway:300,400,600" rel="stylesheet"type="text/css">
                         </ul>
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav ml-auto">
-                        </ul>
+
                         {{-- 以下を追記 --}}
                         <!-- Authentication Links -->
                         {{-- ログインしていなかったらログイン画面へのリンクを表示 --}}
@@ -66,7 +66,8 @@ family=Raleway:300,400,600" rel="stylesheet"type="text/css">
                             </li>
                             @endguest
                             {{-- 以上までを追記 --}}
-                        
+                        </ul>
+
                     </div>
                 </div>
             </nav>
