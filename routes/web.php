@@ -22,6 +22,7 @@ Route::post('news/create', 'Admin\NewsController@create'); # 追記
 Route::get('profile/create','Admin\ProfileController@add')->middleware('auth');
 Route::post('profile/create','Admin\ProfileController@create');
 Route::get('profile/edit','Admin\ProfileController@edit')->middleware('auth');
+Route::post('profile/edit','Admin\profileController@update');
 });
 Auth::routes();
 
