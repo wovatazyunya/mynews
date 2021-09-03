@@ -16,12 +16,25 @@ class ProfileController extends Controller
     public function create(Request $request)
     {
          $this->validate($request, Profile::$rules);
+         $profile = new profile;
+         $form = $request->all();
+         
+        unset($form['_token']);
+        
+         
+        $profile->fill($form);
+        $profile->save();
         return redirect('admin/profile/create');
     }
     
-    public function edit()
+    public function edit(Request $request)
     {
-        return view('admin.profile.edit');
+        
+        $profile = Profile::find($request->id);
+      if (empty($profile)) {
+        abort(404);    
+      }
+      return view('admin.profile.edit', ['profile_form' => $profile]);
     }
     
     public function update()
